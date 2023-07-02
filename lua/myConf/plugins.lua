@@ -7,7 +7,13 @@ lvim.plugins = {
 		end
 	},
 	{ "mrjones2014/nvim-ts-rainbow" },
-	{ "42Paris/42header" },
+	{
+		"42Paris/42header",
+		config = function()
+			vim.g.user42 = "ylyoussf"
+			vim.g.mail42 = "ylyoussf@student.1337.ma"
+		end
+	},
 	{ "alexandregv/norminette-vim" },
 	{
 		"simrat39/symbols-outline.nvim",
@@ -15,12 +21,16 @@ lvim.plugins = {
 			require('symbols-outline').setup()
 		end
 	},
+	-- {
+	-- 	"ggandor/leap.nvim",
+	-- 	name = "leap",
+	-- 	config = function()
+	-- 		require("leap").add_default_mappings()
+	-- 	end,
+	-- },
 	{
-		"ggandor/leap.nvim",
-		name = "leap",
-		config = function()
-			require("leap").add_default_mappings()
-		end,
+		"ggandor/lightspeed.nvim",
+		event = "BufRead",
 	},
 }
 
