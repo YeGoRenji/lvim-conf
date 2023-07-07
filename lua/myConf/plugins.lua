@@ -6,7 +6,12 @@ lvim.plugins = {
 			vim.g.gruvbox_material_cursor = "orange"
 		end
 	},
-	{ "mrjones2014/nvim-ts-rainbow" },
+	{
+		"mrjones2014/nvim-ts-rainbow",
+		config = function()
+			lvim.builtin.treesitter.rainbow.enable = true
+		end
+	},
 	{
 		"42Paris/42header",
 		config = function()
@@ -21,18 +26,17 @@ lvim.plugins = {
 			require('symbols-outline').setup()
 		end
 	},
-	-- {
-	-- 	"ggandor/leap.nvim",
-	-- 	name = "leap",
-	-- 	config = function()
-	-- 		require("leap").add_default_mappings()
-	-- 	end,
-	-- },
 	{
 		"ggandor/lightspeed.nvim",
 		event = "BufRead",
 	},
+	{
+		"Djancyp/better-comments.nvim",
+		config = function()
+			require('better-comment').Setup()
+		end
+	}
 }
 
 lvim.colorscheme = "gruvbox-material"
-lvim.builtin.treesitter.rainbow.enable = true
+lvim.builtin.treesitter.context_commentstring.enable = true
