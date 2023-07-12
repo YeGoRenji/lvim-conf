@@ -35,6 +35,9 @@ lvim.plugins = {
 		config = function()
 			require('better-comment').Setup()
 		end
+	},
+	{
+		"mg979/vim-visual-multi",
 	}
 }
 
