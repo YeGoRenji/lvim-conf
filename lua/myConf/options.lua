@@ -6,7 +6,7 @@ local options = {
 	relativenumber = true,							-- Relative numbering !
 	smartindent = true,								-- Smart indentation ?
 	guifont = "JetBrainsMono Nerd Font Mono:h20",	-- the font used in graphical neovim applications
-	showcmd = true,									-- To show commands below ?
+	showcmd = true,									-- To show commands below ? (I use it to see nb of chars or lines)
 }
 
 -- Just trying this :
@@ -15,23 +15,20 @@ lvim.transparent_window = true
 vim.lsp.set_log_level("OFF")
 
 if vim.g.neovide then
+	vim.opt.winbl = 0
 	-- Helper function for transparency formatting
-	vim.opt.winbl = 100
 	local alpha = function()
 		return string.format("%x", math.floor(255 * (vim.g.transparency or 0.8)))
 	end
+	vim.g.neovide_floating_transparency = 1.0
 	-- g:neovide_transparency should be 0 if you want to unify transparency of content and title bar.
 	vim.g.neovide_transparency = 0.0
 	vim.g.transparency = 0.8
 	vim.g.neovide_background_color = "#0f1117" .. alpha()
-
-	-- vim.g.neovide_floating_blur_amount_x = 2.0
-	-- vim.g.neovide_floating_blur_amount_y = 2.0
-	vim.g.neovide_floating_opacity = 1
-	-- vim.g.neovide_window_floating_opacity = 0
-	-- vim.g.neovide_floating_blur = 0
-	-- vim.g.neovide_window_floating_blur = 0
 end
+
+lvim.builtin.terminal.direction = 'vertical'
+lvim.builtin.terminal.size = 50
 
 for k, v in pairs(options) do
     vim.opt[k] = v

@@ -27,11 +27,11 @@ local clangd_flags = {
   "--folding-ranges",
   "--enable-config", -- clangd 11+ supports reading from .clangd configuration file
   "--offset-encoding=utf-16", --temporary fix for null-ls
+  "--header-insertion=never",
   -- "--limit-references=1000",
   -- "--limit-resutls=1000",
   -- "--malloc-trim",
   -- "--clang-tidy-checks=-*,llvm-*,clang-analyzer-*,modernize-*,-modernize-use-trailing-return-type",
-  -- "--header-insertion=never",
   -- "--query-driver=<list-of-white-listed-complers>"
 }
 

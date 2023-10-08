@@ -3,7 +3,7 @@
 -- Forum: https://www.reddit.com/r/lunarvim/
 -- Discord: https://discord.com/invite/Xb9B4Ny
 
-require "myConf.plugins"
-require "myConf.keybinds"
-require "myConf.options"
-require "myConf.c_cpp_starter"
+require("myConf.plugins")
+require("myConf.keybinds")
+reload("myConf.options")
+-- require("myConf.c_cpp_starter")
