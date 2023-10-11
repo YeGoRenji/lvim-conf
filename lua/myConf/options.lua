@@ -27,8 +27,8 @@ if vim.g.neovide then
 	vim.g.neovide_background_color = "#0f1117" .. alpha()
 end
 
-lvim.builtin.terminal.direction = 'vertical'
-lvim.builtin.terminal.size = 50
+lvim.builtin.terminal.direction = 'horizontal'
+lvim.builtin.terminal.size = 15
 
 for k, v in pairs(options) do
     vim.opt[k] = v

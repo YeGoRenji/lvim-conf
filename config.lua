@@ -5,5 +5,5 @@
 
 require("myConf.plugins")
 require("myConf.keybinds")
-reload("myConf.options")
--- require("myConf.c_cpp_starter")
+require("myConf.options")
+require("myConf.c_cpp_starter")

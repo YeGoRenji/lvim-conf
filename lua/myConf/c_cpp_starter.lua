@@ -47,8 +47,8 @@ local custom_on_attach = function(client, bufnr)
   vim.keymap.set("n", "<leader>lt", "<cmd>ClangdSymbolInfo<cr>", opts)
   vim.keymap.set("n", "<leader>lm", "<cmd>ClangdMemoryUsage<cr>", opts)
 
-  require("clangd_extensions.inlay_hints").setup_autocmd()
-  require("clangd_extensions.inlay_hints").set_inlay_hints()
+  -- require("clangd_extensions.inlay_hints").setup_autocmd()
+  -- require("clangd_extensions.inlay_hints").set_inlay_hints()
 end
 
 local status_ok, project_config = pcall(require, "rhel.clangd_wrl")
