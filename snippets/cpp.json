@@ -1,0 +1,24 @@
+{
+	"cp-extension": {
+		"prefix": ["cpp-cp"],
+		"body": [
+			"#include <bits/stdc++.h>",
+			"using namespace std;",
+			"#define ll long long",
+			"#define mod 1000000007",
+			"#define endl '\\n'",
+			"void solve()",
+			"{",
+				"\t$2",
+			"}",
+			"int main() {",
+			"\tios_base::sync_with_stdio(false);",
+			"\tcin.tie(NULL);",
+			"\tint t;",
+			"\tcin >> t;",
+			"\twhile(t--)",
+			"\t{\n\t\tsolve();\n\t}\n\treturn 0;\n}\n"
+		],
+		"description": "Default cpp code for CP"
+	}
+}

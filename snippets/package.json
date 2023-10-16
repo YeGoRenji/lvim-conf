@@ -1,0 +1,15 @@
+{
+	"name": "nvim-snippets",
+	"author": "YeGo",
+	"engines": {
+		"vscode": "^1.11.0"
+	},
+	"contributes": {
+		"snippets": [
+			{
+				"language": "cpp",
+				"path": "./cpp.json"
+			}
+		]
+	}
+}
