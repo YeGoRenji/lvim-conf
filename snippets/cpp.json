@@ -20,5 +20,16 @@
 			"\t{\n\t\tsolve();\n\t}\n\treturn 0;\n}\n"
 		],
 		"description": "Default cpp code for CP"
+	},
+	"Header protection": {
+		"prefix": "ifndef",
+		"body": [
+			"#ifndef ${TM_FILENAME_BASE/(.*)/${1:/upcase}/}_H",
+			"# define ${TM_FILENAME_BASE/(.*)/${1:/upcase}/}_H",
+			"$2",
+			"",
+			"#endif"
+		],
+		"description": "Log output to console"
 	}
 }
