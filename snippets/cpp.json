@@ -22,14 +22,67 @@
 		"description": "Default cpp code for CP"
 	},
 	"Header protection": {
-		"prefix": "ifndef",
+		"prefix": ["ifndef"],
 		"body": [
 			"#ifndef ${TM_FILENAME_BASE/(.*)/${1:/upcase}/}_H",
 			"# define ${TM_FILENAME_BASE/(.*)/${1:/upcase}/}_H",
+			"",
 			"$2",
 			"",
 			"#endif"
 		],
-		"description": "Log output to console"
+		"description": "Header protection"
+	},
+	"Declaration: Cannonical form": {
+		"prefix": ["DecCannon"],
+		"body": [
+			"class ${TM_FILENAME_BASE} {",
+			"public:",
+			"	${TM_FILENAME_BASE}();",
+			"	${TM_FILENAME_BASE}(const ${TM_FILENAME_BASE} &);",
+			"	${TM_FILENAME_BASE} &operator=(const ${TM_FILENAME_BASE} &);",
+			"	~${TM_FILENAME_BASE}();",
+			"	$1",
+			"private:",
+			"	$2",
+			"};"
+		],
+		"description": "Declatration of Cannonical Form for 42 CPP modules"
+	},
+
+	"Implementation: Cannonical form" : {
+		"prefix": ["ImpCannon"],
+		"body": [
+			"#include \"${TM_FILENAME_BASE}.hpp\"",
+			"",
+			"${TM_FILENAME_BASE}::${TM_FILENAME_BASE}()",
+			"{",
+			"	std::cout << \"${TM_FILENAME_BASE}: Default constructor called\" << std::endl;",
+			"}",
+			"",
+			"${TM_FILENAME_BASE} &${TM_FILENAME_BASE}::operator=(const ${TM_FILENAME_BASE} &obj)",
+			"{",
+			"	std::cout << \"${TM_FILENAME_BASE}: Copy assignment operator called\" << std::endl;",
+			"	if (this != &obj)",
+			"	{",
+			"		$1",
+			"	}",
+			"	return (*this);",
+			"}",
+			"",
+			"${TM_FILENAME_BASE}::${TM_FILENAME_BASE}(${TM_FILENAME_BASE} const &obj)",
+			"{",
+			"	std::cout << \"${TM_FILENAME_BASE}: Copy constructor called\" << std::endl;",
+			"	if (this != &obj)",
+			"		*this = obj;",
+			"}",
+			"",
+			"${TM_FILENAME_BASE}::~${TM_FILENAME_BASE}()",
+			"{",
+			"	std::cout << \"${TM_FILENAME_BASE}: Destructor called\" << std::endl;",
+			"}",
+			"$2"
+		],
+		"description": "Implementation: Cannonical Form for 42 CPP modules"
 	}
 }

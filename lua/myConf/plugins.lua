@@ -19,6 +19,9 @@ lvim.plugins = {
 			vim.g.mail42 = "ylyoussf@student.1337.ma"
 		end
 	},
+	{
+		"cacharle/c_formatter_42.vim",
+	},
 	{ "alexandregv/norminette-vim" },
 	{
 		"simrat39/symbols-outline.nvim",
