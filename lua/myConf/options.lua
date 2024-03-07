@@ -20,16 +20,17 @@ lvim.transparent_window = true
 vim.lsp.set_log_level("OFF")
 
 if vim.g.neovide then
-	-- vim.g.transparency = 0.9
-	-- vim.opt.winbl = 0
-	-- Helper function for transparency formatting
-	-- local alpha = function()
-	-- 	return string.format("%x", math.floor(255 * (vim.g.transparency or 0.8)))
-	-- end
-	-- vim.g.neovide_floating_transparency = 0.5
-	-- -- g:neovide_transparency should be 0 if you want to unify transparency of content and title bar.
-	vim.g.neovide_transparency = 0.9
-	-- vim.g.neovide_background_color = "#0f1117" .. alpha()
+	-- Background blur
+	vim.g.neovide_window_blurred = true
+	vim.g.neovide_transparency = 0.8
+
+	-- Floating
+	vim.g.neovide_floating_blur_amount_x = 4.0
+	vim.g.neovide_floating_blur_amount_y = 4.0
+	vim.g.neovide_floating_shadow = true
+	vim.g.neovide_floating_z_height = 10
+	vim.g.neovide_light_angle_degrees = 90
+	vim.g.neovide_light_radius = 20
 end
 
 lvim.builtin.terminal.direction = 'horizontal'
