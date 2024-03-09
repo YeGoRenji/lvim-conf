@@ -19,10 +19,6 @@ end
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
-lvim.builtin.which_key.mappings["n"] = {
-	"<cmd>Norminette<CR>", "Norm Current File"
-}
-
 lvim.builtin.which_key.mappings["S"] = {
 	"<cmd>SymbolsOutline<CR>", "Show Symbols"
 }

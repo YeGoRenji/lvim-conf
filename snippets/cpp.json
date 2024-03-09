@@ -36,6 +36,9 @@
 	"Declaration: Cannonical form": {
 		"prefix": ["DecCannon"],
 		"body": [
+			"#ifndef ${TM_FILENAME_BASE/(.*)/${1:/upcase}/}_HPP",
+			"# define ${TM_FILENAME_BASE/(.*)/${1:/upcase}/}_HPP",
+			"",
 			"class ${TM_FILENAME_BASE} {",
 			"public:",
 			"	${TM_FILENAME_BASE}();",
@@ -45,7 +48,9 @@
 			"	$1",
 			"private:",
 			"	$2",
-			"};"
+			"};",
+			"",
+			"#endif"
 		],
 		"description": "Declatration of Cannonical Form for 42 CPP modules"
 	},

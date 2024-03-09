@@ -20,10 +20,6 @@ lvim.plugins = {
 		end
 	},
 	{
-		"cacharle/c_formatter_42.vim",
-	},
-	{ "alexandregv/norminette-vim" },
-	{
 		"simrat39/symbols-outline.nvim",
 		config = function()
 			require('symbols-outline').setup()
